@@ -35,8 +35,8 @@ For this to run properly, you must have a file called `config.json` at the root 
 * **products**: Array of objects for Pretty Stocked to search.
     * **name**: String (is used in the Pushbullet notification)
     * **url**: Valid URL for the scraper to search.
-    * **cheerio_selector**: Valid Cheerio selector for an element that signifies the product is in stock, ie. "Add to Cart" button. Pretty Stoked evaluates the Cheerio selector string as a jQuery object. The expected return is a number. More on Cheerio: https://cheerio.js.org/
-
+    * **cheerio_selector_length**: Valid Cheerio selector for an element that signifies the product is in stock, ie. "Add to Cart" button. Pretty Stoked evaluates the Cheerio selector string as a jQuery object. The expected return is a number. More on Cheerio: https://cheerio.js.org/
+    * **request_headers**: Custom headers for requests.
 ### Example config.json
 ```json
 {
@@ -46,7 +46,10 @@ For this to run properly, you must have a file called `config.json` at the root 
     {
       "name": "Acer 34\" Ultrawide Monitor",
       "url": "https://acerrecertified.com/acer-um-cx2aa-001-34-xr342ck-bmijpphz-widescreen-lcd-monitor-3440x1440-1k-1/",
-      "cheerio_selector": "$('button.add-to-cart').length"
+      "cheerio_selector_length": "$('button.add-to-cart').length",
+      "request_headers": {
+        "User-Agent": "Node"
+      }
     }
   ]
 }

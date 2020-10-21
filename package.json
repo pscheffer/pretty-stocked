@@ -1,6 +1,6 @@
 {
   "name": "pretty-stocked",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple node.js scraper for alerting yourself via Pushbullet to rarely stocked goods.",
   "main": "index.js",
   "private": true,
@@ -10,8 +10,8 @@
   "author": "Philip Scheffer",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^0.22.0",
-    "pushbullet": "^2.0.0",
-    "request": "^2.81.0"
+    "cheerio": "^1.0.0-rc.3",
+    "pushbullet": "^2.4.0",
+    "superagent": "^6.1.0"
   }
 }
