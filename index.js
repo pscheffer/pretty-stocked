@@ -57,6 +57,7 @@ const checkStock = async (product, product_index) => {
     }
   } catch (error) {
     console.error(error)
+    process.exit(0)
   }
 
 }
