@@ -59,12 +59,8 @@ const checkStock = async (product, product_index) => {
       console.log(`${product.name} -- Not in stock`)
     }
     // make sure interval is reset to default after successful scrape
-<<<<<<< HEAD
     interval = config.default_interval 
     error_count = 0
-=======
-    interval = config.default_interval
->>>>>>> d5e265be1d252b916d7e107ad51085f387ea49f1
   } catch (error) {
     error_count++
     // switch to a 10s interval
