@@ -2,6 +2,7 @@ const cheerio = require('cheerio')
 const pushbullet = require('pushbullet')
 const fs = require('fs')
 const sa = require('superagent')
+const notifier = require('node-notifier') 
 
 // load the required config.json file from the root of the project
 const config = JSON.parse(fs.readFileSync('config.json'))
@@ -10,8 +11,10 @@ const config = JSON.parse(fs.readFileSync('config.json'))
 const pusher = new pushbullet(config.pushbullet_token)
 
 // cache and init
-const products = config.products;
-const interval = config.default_interval;
+const products = config.products
+var interval = config.default_interval
+
+var error_count = 0
 
 // check each product to see if its in stock
 const checkAllProducts = () => {
@@ -44,7 +47,7 @@ const checkStock = async (product, product_index) => {
       products[product_index].found = true
 
       var title = `In Stock Alert: ${product.name}`
-      
+
       console.log(`${product.name} -- In stock`)
       // lets push to pusher
       pusher.link({}, title, product.url, function(error, response) {
@@ -55,9 +58,21 @@ const checkStock = async (product, product_index) => {
     } else {
       console.log(`${product.name} -- Not in stock`)
     }
+    // make sure interval is reset to default after successful scrape
+    interval = config.default_interval
   } catch (error) {
-    console.error(error)
-    process.exit(0)
+    error_count++
+    // switch to a 10s interval
+    interval = 10000
+    // keep checking for a minute before shutting the app down
+    if(error_count >= 6) {
+      console.error(error)
+      notifier.notify({
+        title: 'Pretty Stocked Error',
+        message: 'Ran into an issue and had to shut down. Check the console for more information and to start again.'
+      });
+      process.exit(0)
+    }
   }
 
 }

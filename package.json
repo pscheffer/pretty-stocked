@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "node-notifier": "^8.0.0",
     "pushbullet": "^2.4.0",
     "superagent": "^6.1.0"
   }
