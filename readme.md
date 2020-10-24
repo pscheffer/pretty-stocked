@@ -19,6 +19,7 @@ For this to run properly, you must have a file called `config.json` at the root 
 
 ```json
 {
+  "discord_webhook_url": DISCORD_WEBHOOK_URL,
   "pushbullet_token": YOUR_PUSHBULLET_ACCESS_TOKEN,
   "default_interval": DEFAULT_INTERVAL_IN_MS,
   "products": [
@@ -30,13 +31,14 @@ For this to run properly, you must have a file called `config.json` at the root 
   ]
 }
 ```
-* **pushbullet_token**: Create an access token at: https://www.pushbullet.com/#settings/account
-* **default_interval**: Default interview in Milliseconds (be cognisent of the people on the other end, don't spam.)
-* **products**: Array of objects for Pretty Stocked to search.
+* **pushbullet_token**: If added, will send Pushbullet notifications. Create an access token at: https://www.pushbullet.com/#settings/account
+* **discord_webhook_url**: If added, will send Discord notification via a configured webhook
+* **default_interval**: Default interview in Milliseconds (be cognisent of the people on the other end, don't spam.) Default value is 5000 milliseconds.
+* **products**: Required. Array of objects for Pretty Stocked to search.
     * **name**: String (is used in the Pushbullet notification)
     * **url**: Valid URL for the scraper to search.
     * **cheerio_selector_length**: Valid Cheerio selector for an element that signifies the product is in stock, ie. "Add to Cart" button. Pretty Stoked evaluates the Cheerio selector string as a jQuery object. The expected return is a number. More on Cheerio: https://cheerio.js.org/
-    * **request_headers**: Custom headers for requests.
+    * **request_headers**: Optional. Custom headers for requests.
 ### Example config.json
 ```json
 {
