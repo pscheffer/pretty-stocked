@@ -12,24 +12,51 @@ const pusher = new pushbullet(config.pushbullet_token)
 
 // cache and init
 const products = config.products
-var interval = config.default_interval
-
+var default_interval = config.default_interval || 5000
+var interval = default_interval
 var error_count = 0
 
-// check each product to see if its in stock
-const checkAllProducts = () => {
-
-  if(products.length > 0) {
-    for(var i = 0; i < products.length; i++) {
-      var product = products[i];
-      if(typeof product.found === 'undefined' || !product.found) {
-        checkStock(product, i)
-      } else {
-        console.log('Skipping ' + product.name)
-      }
+const notifyPushbullet = async (product, title) => {
+  // lets push to pusher
+  pusher.link({}, title, product.url, function(error, response) {
+    if(error) {
+      console.log(error)
     }
-  }
+  });
+}
 
+const notifyDiscord = async (product, title) => {
+  try {
+    var webhook_response = await sa.post(config.discord_webhook_url)
+      .set('Content-Type', 'application/json')
+      .send({
+        content: `${title} @everyone`,
+        embeds: [
+          {
+            title: product.url,
+            url: product.url
+          }
+        ]
+      })
+  } 
+  catch (error) {
+    console.log(error)
+  }
+}
+
+const sendNotifications = async(product) => {
+  var title = `In Stock Alert: ${product.name}`
+  console.log(title)
+  notifier.notify({
+    title: title,
+    message: product.url
+  });
+  if(config.discord_webhook_url) {
+    notifyDiscord(product, title)
+  }
+  if(config.pushbullet_token) {
+    notifyPushbullet(product, title)
+  }
 }
 
 // check an individual product and if found, notify you via push bullet and update the products array to stop looking for it.
@@ -42,24 +69,15 @@ const checkStock = async (product, product_index) => {
     var cheerio_selector_length = eval(product.cheerio_selector_length)
     // check if there is an add to cart button on the page
     if (typeof cheerio_selector_length !== 'undefined' && cheerio_selector_length > 0) {
-            
       // lets skip this sucker for the rest of the time since we've found it
       products[product_index].found = true
-
-      var title = `In Stock Alert: ${product.name}`
-
-      console.log(`${product.name} -- In stock`)
-      // lets push to pusher
-      pusher.link({}, title, product.url, function(error, response) {
-        if(error) {
-          console.log(error)
-        }
-      });
+      // send all notifications
+      sendNotifications(product)
     } else {
       console.log(`${product.name} -- Not in stock`)
     }
     // make sure interval is reset to default after successful scrape
-    interval = config.default_interval 
+    interval = default_interval
     error_count = 0
   } catch (error) {
     error_count++
@@ -78,8 +96,24 @@ const checkStock = async (product, product_index) => {
 
 }
 
-// start running the scrape
-checkAllProducts()
+// check each product to see if its in stock
+const checkAllProducts = () => {
+  if(products.length > 0) {
+    for(var i = 0; i < products.length; i++) {
+      var product = products[i];
+      if(typeof product.found === 'undefined' || !product.found) {
+        checkStock(product, i)
+      } else {
+        console.log('Skipping ' + product.name)
+      }
+    }
+  }
+}
+
+notifier.notify({
+  title: 'Pretty Stocked',
+  message: 'Starting Pretty Stocked. You will receive noticataions in the console, system notifications, and if configured, Discord, and Pushbullet.'
+});
 
 // continue checking for products at the configuration intervarl
 setInterval(function (){
