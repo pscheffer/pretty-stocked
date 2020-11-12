@@ -22,6 +22,7 @@ For this to run properly, you must have a file called `config.json` at the root 
   "discord_webhook_url": DISCORD_WEBHOOK_URL,
   "pushbullet_token": YOUR_PUSHBULLET_ACCESS_TOKEN,
   "default_interval": DEFAULT_INTERVAL_IN_MS,
+  "check_after_found_interval": CHECK_AFTER_FOUND_INTERVAL_IN_MS,
   "products": [
     {
       "name": PRODUCT_NAME,
@@ -44,6 +45,7 @@ For this to run properly, you must have a file called `config.json` at the root 
 {
   "pushbullet_token": "o.983948992384238923u23ew",
   "default_interval": 60000,
+  "check_after_found_interval": 3600000,
   "products": [
     {
       "name": "Acer 34\" Ultrawide Monitor",

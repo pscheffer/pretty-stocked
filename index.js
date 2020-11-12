@@ -70,10 +70,11 @@ const checkStock = async (product, product_index) => {
     // check if there is an add to cart button on the page
     if (typeof cheerio_selector_length !== 'undefined' && cheerio_selector_length > 0) {
       // lets skip this sucker for the rest of the time since we've found it
-      products[product_index].found = true
+      products[product_index].found_ts = new Date().getTime()
       // send all notifications
       sendNotifications(product)
     } else {
+      products[product_index].found_ts = null
       console.log(`${product.name} -- Not in stock`)
     }
     // make sure interval is reset to default after successful scrape
@@ -84,13 +85,12 @@ const checkStock = async (product, product_index) => {
     // switch to a 10s interval
     interval = 10000
     // keep checking for a minute before shutting the app down
-    if(error_count >= 6) {
+    if(error_count >= 10) {
       console.error(error)
       notifier.notify({
         title: 'Pretty Stocked Error',
         message: 'Ran into an issue and had to shut down. Check the console for more information and to start again.'
       });
-      process.exit(0)
     }
   }
 
@@ -101,11 +101,23 @@ const checkAllProducts = () => {
   if(products.length > 0) {
     for(var i = 0; i < products.length; i++) {
       var product = products[i];
-      if(typeof product.found === 'undefined' || !product.found) {
-        checkStock(product, i)
+      // if there is a timestamp, check if its greater than an hour old
+      if(typeof product.found != 'undefined' && product.found_ts !== null) {
+        // current timestamp in ms
+        var current_ts = new Date().getTime()
+        // subtract since found to get ts
+        var time_diff = current_ts - product.found_ts
+        // default is 1 hr
+        var recheck_interval_ms = config.check_after_found_interval || 3600000
+        // compare whether to check
+        if(time_diff > recheck_interval_ms) {
+          checkStock(product, i)
+        } else {
+          console.log('Skipping ' + product.name)
+        }
       } else {
-        console.log('Skipping ' + product.name)
-      }
+        checkStock(product, i)
+      } 
     }
   }
 }
