@@ -67,14 +67,15 @@ const checkStock = async (product, product_index) => {
     const res = await sa.get(product.url).set(product.request_headers || {})
     $ = cheerio.load(res.text)
     var cheerio_selector_length = eval(product.cheerio_selector_length)
-    // check if there is an add to cart button on the page
-    if (typeof cheerio_selector_length !== 'undefined' && cheerio_selector_length > 0) {
+    // check if there is an add to cart button on the page\
+    var cheerio_required_length = product.cheerio_selector_required_length || 1
+    if (typeof cheerio_selector_length !== 'undefined' && cheerio_selector_length === cheerio_required_length) {
       // lets skip this sucker for the rest of the time since we've found it
       products[product_index].found_ts = new Date().getTime()
       // send all notifications
-      sendNotifications(product)
+      await sendNotifications(product)
     } else {
-      products[product_index].found_ts = null
+      products[product_index].found_ts = 0
       console.log(`${product.name} -- Not in stock`)
     }
     // make sure interval is reset to default after successful scrape
@@ -100,9 +101,13 @@ const checkStock = async (product, product_index) => {
 const checkAllProducts = () => {
   if(products.length > 0) {
     for(var i = 0; i < products.length; i++) {
+      if(typeof products[i].found_ts === 'undefined') {
+        products[i].found_ts = 0
+      }
       var product = products[i];
-      // if there is a timestamp, check if its greater than an hour old
-      if(typeof product.found != 'undefined' && product.found_ts !== null) {
+      if(products[i].found_ts === 0) {
+        checkStock(product, i)
+      } else {
         // current timestamp in ms
         var current_ts = new Date().getTime()
         // subtract since found to get ts
@@ -115,9 +120,7 @@ const checkAllProducts = () => {
         } else {
           console.log('Skipping ' + product.name)
         }
-      } else {
-        checkStock(product, i)
-      } 
+      }
     }
   }
 }
