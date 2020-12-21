@@ -18,11 +18,10 @@ var interval = config.default_interval
 // default is 1 hr
 var error_count = 0
 
+var pusher = false
 // if pushbullet exists, configure it
 if(config.pushbullet_token) {
-  const pusher = new pushbullet(process.env.PUSHBULLET_TOKEN)
-} else {
-  const pusher = false
+  pusher = new pushbullet(config.pushbullet_token)
 }
 
 // load the required config.json file from the root of the project
@@ -71,7 +70,7 @@ const sendNotifications = async(product) => {
   if(config.discord_urls) {
     notifyDiscord(product, title)
   }
-  
+
   if(config.pushbullet_token) {
     notifyPushbullet(product, title)
   }
@@ -142,10 +141,21 @@ const checkAllProducts = () => {
   }
 }
 
+const starting_msg = 'Starting Pretty Stocked. You will receive noticataions in the console, system notifications, and if configured, Discord, and Pushbullet.';
+
 notifier.notify({
   title: 'Pretty Stocked',
-  message: 'Starting Pretty Stocked. You will receive noticataions in the console, system notifications, and if configured, Discord, and Pushbullet.'
+  message: starting_msg
 });
+
+if(config.pushbullet_token && pusher) {
+  // lets push to pusher
+  pusher.note({}, 'Pretty Stocked', starting_msg, function(error, response) {
+    if(error) {
+      console.log(error)
+    }
+  });
+}
 
 // continue checking for products at the configuration intervarl
 setInterval(function (){
