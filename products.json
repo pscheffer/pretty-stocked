@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Best Buy: Asus Strix 3090",
+    "url": "https://www.bestbuy.com/site/asus-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432447.p?skuId=6432447",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: EVGA 3090 FTW3 (Non-Ultra) Gaming",
+    "url": "https://www.bestbuy.com/site/evga-geforce-rtx-3090-ftw3-gaming-24gb-gddr6x-pci-express-4-0-graphics-card/6436193.p?skuId=6436193",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: EVGA 3090 FTW3 Ultra Gaming",
+    "url": "https://www.bestbuy.com/site/evga-geforce-rtx-3090-ftw3-ultra-gaming-24gb-gddr6x-pci-express-4-0-graphics-card/6436192.p?skuId=6436192",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: RTX 3090 FE",
+    "url": "https://www.bestbuy.com/site/nvidia-geforce-rtx-3090-24gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429434.p?skuId=6429434",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: RTX 3080 FE",
+    "url": "https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "cheerio_selector_required_length": 2,
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: Asus Strix 3080",
+    "url": "https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: Nvidia 3070 FE",
+    "url": "https://www.bestbuy.com/site/nvidia-geforce-rtx-3070-8gb-gddr6-pci-express-4-0-graphics-card-dark-platinum-and-black/6429442.p?skuId=6429442",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: AMD 5900x",
+    "url": "https://www.bestbuy.com/site/amd-ryzen-9-5900x-4th-gen-12-core-24-threads-unlocked-desktop-processor-without-cooler/6438942.p?skuId=6438942",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Best Buy: AMD 5950x",
+    "url": "https://www.bestbuy.com/site/amd-ryzen-9-5950x-4th-gen-16-core-32-threads-unlocked-desktop-processor-without-cooler/6438941.p?skuId=6438941",
+    "cheerio_selector_length": "$('.fulfillment-add-to-cart-button button.btn-primary.add-to-cart-button').length",
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36",
+      "Cookie": "_abck=2752995FFD2570CA1C343C865FFB9B87~-1~YAAQtycwF15yzDF1AQAAMkO9SwRGZBwtTCxlsIOM/UW9+WkoM5SJtZA13J1S8m/jMDUG0w+isHXnFBYamVg9i42gxbmiTdQDSwrVnd6BIt2sbGQRi0UIRL4NH2Jup05kk0ymBY5YajdRykWmhx04dsczSlJomjHHjkJV7RPZxC3o072xCuA+wHjfqIVG8A3Na0GymsLtx+Pgwns9FRjR5k6hSqndP0WvvFlpdMLkO8btTGy6lbEaPjRkICzVX8QGMP/pTC3Znxr+XL2rhx5cRSBH2T68NeNQFWZJrHQL8I19q9jpxR+7uYysekE6GD7/ZBgjrXQ2Anc=~0~-1~-1; UID=db96c0ad-0e2c-4b0b-8578-19ece88c8dda; pst2=2518|N; physical_dma=501; customerZipCode=11201|N; oid=1900090608; vt=a957afab-13b0-11eb-aeb8-0afe2cfb9ed1; bm_sz=401F68649D382C727904A2FED1E15DB4~YAAQnycwF+SSIUV1AQAAXGK9SwkS8VWesgAFiIzdabWxHYZB8T8fnrEp5OWby+m21eaVBJMM7yOrrW62EmIkskssxq/SKxSiMR7Hw2bAPHIACshmJPJie/2XDQn2+Oxsbt0j3gOFG0bLs7lBpBlFjJYMIhaEQmuairG6P3JSxbXkuaKuYPfrdV0gFpRZL6zkYg==; bby_rdp=l; bby_cbc_lb=p-browse-e; CTT=f2d8c811123a81161e5c1d27b2803d35; SID=d2ac9ea3-ca2d-4759-afe9-ed5ab575c3dc; ltc=%20"
+    }
+  },
+  {
+    "name": "Amazon: Cooler Master SFX v850",
+    "url": "https://www.amazon.com/dp/B08LP6WS35",
+    "cheerio_selector_length": "$('#addToCart_feature_div #add-to-cart-button').length",
+    "cheerio_selector_required_length": 1,
+    "request_headers": {
+      "Accept-Encoding": "gzip",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36"
+    }    
+  }
+]

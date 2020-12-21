@@ -1,20 +1,32 @@
+require('dotenv').config();
 const cheerio = require('cheerio')
 const pushbullet = require('pushbullet')
 const fs = require('fs')
 const sa = require('superagent')
 const notifier = require('node-notifier') 
 
-// load the required config.json file from the root of the project
-const config = JSON.parse(fs.readFileSync('config.json'))
+// requires environment variables for pushbullet and discord
+const config = {
+  discord_urls: process.env.DISCORD_WEBHOOK_URL.split('||') || [],
+  pushbullet_token: process.env.PUSHBULLET_TOKEN || '',
+  default_interval: process.env.DEFAULT_INTERVAL || 5000,
+  recheck_interval_ms: process.env.CHECK_AFTER_FOUND_INTERVAL || 3600000
+}
 
-// intialize the pushbullet api using your token
-const pusher = new pushbullet(config.pushbullet_token)
-
-// cache and init
-const products = config.products
-var default_interval = config.default_interval || 5000
-var interval = default_interval
+// interval can be overridden
+var interval = config.default_interval
+// default is 1 hr
 var error_count = 0
+
+// if pushbullet exists, configure it
+if(config.pushbullet_token) {
+  const pusher = new pushbullet(process.env.PUSHBULLET_TOKEN)
+} else {
+  const pusher = false
+}
+
+// load the required config.json file from the root of the project
+const products = JSON.parse(fs.readFileSync('products.json'))
 
 const notifyPushbullet = async (product, title) => {
   // lets push to pusher
@@ -27,17 +39,21 @@ const notifyPushbullet = async (product, title) => {
 
 const notifyDiscord = async (product, title) => {
   try {
-    var webhook_response = await sa.post(config.discord_webhook_url)
-      .set('Content-Type', 'application/json')
-      .send({
-        content: `${title} @everyone`,
-        embeds: [
-          {
-            title: product.url,
-            url: product.url
-          }
-        ]
-      })
+    for(var i = 0; i < discord_urls.length; i++) {
+      var webhook_response = await sa.post(discord_urls[i])
+        .set('Content-Type', 'application/json')
+        .send({
+          content: `${title} @everyone`,
+          embeds: [
+            {
+              title: product.url,
+              url: product.url
+            }
+          ]
+        })
+      
+      console.log(webhook_response)
+    }
   } 
   catch (error) {
     console.log(error)
@@ -51,9 +67,11 @@ const sendNotifications = async(product) => {
     title: title,
     message: product.url
   });
-  if(config.discord_webhook_url) {
+
+  if(config.discord_urls) {
     notifyDiscord(product, title)
   }
+  
   if(config.pushbullet_token) {
     notifyPushbullet(product, title)
   }
@@ -79,7 +97,7 @@ const checkStock = async (product, product_index) => {
       console.log(`${product.name} -- Not in stock`)
     }
     // make sure interval is reset to default after successful scrape
-    interval = default_interval
+    interval = config.default_interval
     error_count = 0
   } catch (error) {
     error_count++
@@ -112,10 +130,9 @@ const checkAllProducts = () => {
         var current_ts = new Date().getTime()
         // subtract since found to get ts
         var time_diff = current_ts - product.found_ts
-        // default is 1 hr
-        var recheck_interval_ms = config.check_after_found_interval || 3600000
+
         // compare whether to check
-        if(time_diff > recheck_interval_ms) {
+        if(time_diff > config.recheck_interval_ms) {
           checkStock(product, i)
         } else {
           console.log('Skipping ' + product.name)
